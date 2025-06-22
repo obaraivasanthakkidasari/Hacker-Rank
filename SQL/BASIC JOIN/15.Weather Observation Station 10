@@ -1,0 +1,29 @@
+/*15.Weather Observation Station 10
+Query the list of CITY names from STATION that do not end with vowels. Your result cannot contain duplicates.
+Input Format
+The STATION table is described as follows:
+/*
+
+/*
+CASE 1
+SELECT DISTINCT CITY 
+FROM STATION
+WHERE CITY NOT REGEXP '[AEIOU]$'; 
+*/
+
+/* CASE 2
+SELECT DISTINCT CITY 
+FROM STATION
+WHERE CITY REGEXP '[^[AEIOU]]$'
+*/ 
+
+/*CASE 3*/
+
+SELECT DISTINCT city 
+FROM station 
+WHERE city NOT LIKE '%A'
+  AND city NOT LIKE '%E'
+  AND city NOT LIKE '%I'
+  AND city NOT LIKE '%O'
+  AND city NOT LIKE '%U';
+ 
